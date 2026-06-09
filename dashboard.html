@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="header">
+
+        <h1>
+            <i class="fas fa-user-circle"></i>
+            Welcome {{ user }}
+        </h1>
+
+        <a href="/logout" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+        </a>
+
+    </div>
+
+    <div class="profile-card">
+
+        <h2>Profile Information</h2>
+
+        <p><i class="fas fa-user"></i> {{ user }}</p>
+
+        <p><i class="fas fa-envelope"></i> {{ email }}</p>
+
+        <p><i class="fas fa-check-circle"></i> Active User</p>
+
+        <p><i class="fas fa-shield-alt"></i> Password Protected</p>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h2>{{ total_users }}</h2>
+            <p>Total Users</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-lock"></i>
+            <h2>100%</h2>
+            <p>Secure Login</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-database"></i>
+            <h2>SQLite</h2>
+            <p>Database</p>
+        </div>
+
+    </div>
+
+    <div class="project-box">
+
+        <h2>Project Details</h2>
+
+        <ul>
+            <li>Flask Authentication System</li>
+            <li>User Registration</li>
+            <li>User Login</li>
+            <li>Session Management</li>
+            <li>Password Hashing</li>
+            <li>SQLite Database</li>
+            <li>Secure Logout</li>
+        </ul>
+
+    </div>
+
+    <footer>
+        Developed By <b>R. Padmavathi</b>
+    </footer>
+
+</div>
+
+</body>
+</html>
